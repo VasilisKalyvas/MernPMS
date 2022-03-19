@@ -53,7 +53,7 @@ const Projects = () => {
     } catch (err) {
       console.log(err);
     }
-    window.location.reload(false);
+   setTimeout('window.location.reload(false)',0);
 };
   return (
   <>
