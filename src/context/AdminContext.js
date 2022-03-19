@@ -17,7 +17,7 @@ export const AdminContextProvider = ({ children }) => {
   
   const checkAdmin = async () => {
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/admin`, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/admin`, {
         method: "GET"
       });
       const result = await res.json();

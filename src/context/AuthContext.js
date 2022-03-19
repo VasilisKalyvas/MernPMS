@@ -51,7 +51,7 @@ export const AuthContextProvider = ({ children }) => {
   // login request.
   const loginUser = async (userData) => {
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/login`, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -76,7 +76,7 @@ export const AuthContextProvider = ({ children }) => {
   // register request.
   const registerUser = async (userData) => {
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/register`, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

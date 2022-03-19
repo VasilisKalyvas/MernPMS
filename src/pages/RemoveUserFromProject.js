@@ -22,7 +22,7 @@ const RemoveUserFromProject = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const res = await fetch(`https://mern-pms.herokuapp.com/api/removeusertoproject/` + id, {
+    const res = await fetch(`http://localhost:8000/api/removeusertoproject/` + id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -44,7 +44,7 @@ const RemoveUserFromProject = () => {
   useEffect(async () => {
     setLoading(true);
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/project/${id}`, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/project/${id}`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -62,7 +62,7 @@ const RemoveUserFromProject = () => {
   const [users, setUsers] = useState([]);
   useEffect(async () => {
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/users`, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/users`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

@@ -16,7 +16,7 @@ const Projects = () => {
   useEffect(async () => {
     setLoading(true);
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/myprojects`, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/myprojects`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
+import Spinner from "../components/Spinner";
 import AuthContext from "../context/AuthContext";
 import ToastContext from "../context/ToastContext";
 
@@ -22,7 +23,7 @@ const AddUserToProject = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const res = await fetch(`https://mern-pms.herokuapp.com/api/addusertoproject/`+ id, {
+    const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/addusertoproject/`+ id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -44,7 +45,7 @@ const AddUserToProject = () => {
   useEffect(async () => {
     setLoading(true);
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/project/${id}`, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/project/${id}`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -62,7 +63,7 @@ const AddUserToProject = () => {
   const [users, setUsers] = useState([]);
   useEffect(async () => {
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/users`, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/users`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

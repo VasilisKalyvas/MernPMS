@@ -25,7 +25,7 @@ const AddUserToProject = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const res = await fetch(`https://mern-pms.herokuapp.com/api/createtaskforproject/`+ id, {
+    const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/createtaskforproject/`+ id, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -47,7 +47,7 @@ const AddUserToProject = () => {
   const [users, setUsers] = useState([]);
   useEffect(async () => {
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/users`, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/users`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

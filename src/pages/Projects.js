@@ -15,7 +15,7 @@ const Projects = () => {
   useEffect(async () => {
     setLoading(true);
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/projects`, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/projects`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -36,7 +36,7 @@ const Projects = () => {
   }, []);
   const deleteProject = async (id) => {
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/deleteproject/` + id, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/deleteproject/` + id, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

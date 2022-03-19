@@ -17,7 +17,7 @@ const ProjectTasks = () => {
   useEffect(async () => {
     setLoading(true);
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/projecttasks/`+id, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/projecttasks/`+id, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -39,7 +39,7 @@ const ProjectTasks = () => {
   
   const deleteTask = async (id) => {
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/deletetask/${id}`, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/deletetask/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -61,7 +61,7 @@ const ProjectTasks = () => {
 
 const undoneTask = async (id) => {
   try {
-    const res = await fetch(`https://mern-pms.herokuapp.com/api/undonetask/${id}`, {
+    const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/undonetask/${id}`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -83,7 +83,7 @@ const undoneTask = async (id) => {
 
 const doneTask = async (id) => {
   try {
-    const res = await fetch(`https://mern-pms.herokuapp.com/api/donetask/${id}`, {
+    const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/donetask/${id}`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,

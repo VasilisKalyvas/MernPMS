@@ -22,7 +22,7 @@ const EditProject = () => {
     const handleSubmit = async (event) => {
       event.preventDefault();
   
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/editproject`, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/editproject`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -44,7 +44,7 @@ const EditProject = () => {
     useEffect(async () => {
       setLoading(true);
       try {
-        const res = await fetch(`https://mern-pms.herokuapp.com/api/project/${id}`, {
+        const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/project/${id}`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

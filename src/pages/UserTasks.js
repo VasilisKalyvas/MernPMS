@@ -16,7 +16,7 @@ const AllContact = () => {
   useEffect( async () => {
     setLoading(true);
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/usertasks/`+ id, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/usertasks/`+ id, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -38,7 +38,7 @@ const AllContact = () => {
 
   const deleteUserTask = async (id) => {
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/deleteusertask/` + id, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/deleteusertask/` + id, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

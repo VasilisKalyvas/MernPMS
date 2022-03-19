@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Button, Card, Modal } from "react-bootstrap";
 import { Link, Navigate, useNavigate } from "react-router-dom";
+import Spinner from "../components/Spinner";
 import AuthContext from "../context/AuthContext";
 import ToastContext from "../context/ToastContext";
 import { FaFolder, FaFolderPlus, FaUsers} from "react-icons/fa";
@@ -17,7 +18,7 @@ const Admin = () => {
   useEffect(async () => {
     setLoading(true);
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/users`, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/users`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -38,7 +39,7 @@ const Admin = () => {
 
   const deleteUser = async (id) => {
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/deleteuser/${id}`, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/deleteuser/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

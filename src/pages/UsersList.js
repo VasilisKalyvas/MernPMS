@@ -17,7 +17,7 @@ const UsersList = () => {
   useEffect(async () => {
     setLoading(true);
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/users`, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/users`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -38,7 +38,7 @@ const UsersList = () => {
 
   const deleteUser = async (id) => {
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/deleteuser/${id}`, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/deleteuser/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

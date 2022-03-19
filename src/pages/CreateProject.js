@@ -19,7 +19,7 @@ const CreateProject = () => {
 
   const handleSubmit = async (event) => {
       event.preventDefault();
-     const res = await fetch(`https://mern-pms.herokuapp.com/api/project`, 
+     const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/project`, 
      {  method: "POST", 
         headers:{ "Content-Type": "application/json",
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -40,7 +40,7 @@ const CreateProject = () => {
 
   useEffect(async () => {
     try {
-      const res = await fetch(`https://mern-pms.herokuapp.com/api/users`, {
+      const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/users`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
