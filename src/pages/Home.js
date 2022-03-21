@@ -5,12 +5,6 @@ import ToastContext from "../context/ToastContext";
 import '../components/Footer.css'
 
 const Home = () => {
-  const navigate = useNavigate();
-  const [loading, setLoading] = useState(false);
-const { user } = useContext(AuthContext);
-  useEffect(() => {
-    !user && navigate("/login", { replace: true });
-  }, []);
   return (
     <>
    <div className='jumbotron'>
