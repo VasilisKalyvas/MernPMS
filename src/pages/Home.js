@@ -8,12 +8,9 @@ const Home = () => {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
-
-  useEffect(async () => {
-    setLoading(true);
-    if(!user && window.location.reload ===false ){
-      navigate("/login", { replace: true });
-    }
+const { user } = useContext(AuthContext);
+  useEffect(() => {
+    !user && navigate("/login", { replace: true });
   }, []);
   return (
     <>
