@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import AuthContext from "../context/AuthContext";
 import ToastContext from "../context/ToastContext";
+import "./table.css";
 
 const UsersList = () => {
   const loggedIn = useContext(AuthContext);
@@ -68,6 +69,7 @@ const UsersList = () => {
           <Spinner splash="Loading Users..." />
         ) : (
           <>
+        <div className="table">
           <table className="table table-hover">
             <thead>
               <tr className="table-dark">
@@ -95,6 +97,7 @@ const UsersList = () => {
               ))}
             </tbody>
           </table>
+        </div>
           </>
         )}
       </div>
