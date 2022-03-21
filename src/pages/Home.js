@@ -5,6 +5,7 @@ import ToastContext from "../context/ToastContext";
 import '../components/Footer.css'
 
 const Home = () => {
+  const { user } = useContext(AuthContext);
   return (
     <>
    <div className='jumbotron'>
