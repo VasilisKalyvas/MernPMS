@@ -6,7 +6,6 @@ import '../components/Footer.css'
 
 const Home = () => {
   const navigate = useNavigate();
-  const { user } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
 const { user } = useContext(AuthContext);
   useEffect(() => {
