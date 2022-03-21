@@ -14,7 +14,7 @@ const Profile = () => {
         <h1>Profile: {user ? user.name : null}</h1>
         <hr className="my-4" />
         <h3>Email: {user ? user.email : null}</h3>
-        <h3>Role test: {user && user.role ? <>
+        <h3>Role: {user && user.role ? <>
                    Admin
                     </> : <> User</>}</h3>
       </div>
