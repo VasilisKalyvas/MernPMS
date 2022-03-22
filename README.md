@@ -1,3 +1,11 @@
+# My App
+
+https://mern-pms.herokuapp.com
+
+Admin:
+email: admin@gmail.com
+password: admin@gmail.com
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
