@@ -22,7 +22,7 @@ const RemoveUserFromProject = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const res = await fetch(`http://localhost:8000/api/removeusertoproject/` + id, {
+    const res = await fetch(`https://mern-backend-pms.herokuapp.com/api/removeusertoproject/` + id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
